@@ -9,7 +9,7 @@ import json
 
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
-    'User-Agent': 'pyIBGE - https://github.com/leogregianin/pyibge',
+    'User-Agent': 'ibge.py - https://github.com/leogregianin/pyibge',
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
@@ -97,9 +97,9 @@ class Municipios(object):
         return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla'] for i in range(self.count())]
 
     def getDados(self):
-        data = dict()
         dados = []
         for i in range(self.count()):
+            data = dict()
             data['ibge'] = self.json_ibge[i]['id']
             data['nome'] = self.json_ibge[i]['nome']
             data['uf'] = self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla']
