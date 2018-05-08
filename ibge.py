@@ -9,7 +9,7 @@ import json
 
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
-    'User-Agent': 'ibge.py - https://github.com/leogregianin/pyibge',
+    'User-Agent': 'ibge.py - https://github.com/leogregianin/ibge',
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
