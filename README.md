@@ -1,6 +1,13 @@
 # ibge
 Data collection of geographical divisions of Brazil by IBGE (https://servicodados.ibge.gov.br/api/docs).
+
 Coleta de dados das divisões geográficas do Brasil feita pelo IBGE (https://servicodados.ibge.gov.br/api/docs).
+
+# Install
+
+```bash
+$ pip install -r requirements.txt
+```
 
 
 # Como usar
