@@ -16,7 +16,7 @@ $ pip install -r requirements.txt
 ## Regiões
 
 ```python
-from ibge import *
+from ibge.localidades import *
 ibge = Regioes()
 ```
 
@@ -54,7 +54,7 @@ ibge.getNome()
 ## Estados
 
 ```python
-from ibge import *
+from ibge.localidades import *
 ibge = Estados()
 ```
 
@@ -92,7 +92,7 @@ ibge.getNome()
 ## Municípios
 
 ```python
-from ibge import *
+from ibge.localidades import *
 ibge = Municipios()
 ```
 
@@ -148,7 +148,7 @@ ibge.getDados()
 ## Município específico
 
 ```python
-from ibge import *
+from ibge.localidades import *
 ibge = Municipio('3302106')
 ```
 
@@ -192,7 +192,7 @@ Rio de Janeiro
 ## Municípios por UF
 
 ```python
-from ibge import *
+from ibge.localidades import *
 ibge = MunicipioPorUF('14')
 ```
 
