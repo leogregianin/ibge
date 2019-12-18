@@ -10,7 +10,7 @@ setuptools.setup(
     name='ibge',
     license="MIT",
     description='Collection of APIs for the IBGE Data Services in Brazil',
-    version='0.0.3',
+    version='0.0.4',
     long_description=README,
     long_description_content_type="text/markdown",
     url='https://github.com/leogregianin/ibge/',
@@ -30,5 +30,8 @@ setuptools.setup(
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Natural Language :: Portuguese (Brazilian)'
-    ]
+    ],
+    project_urls={
+        'Documentation': 'https://github.com/leogregianin/ibge/blob/master/README.md'
+    }
 )
