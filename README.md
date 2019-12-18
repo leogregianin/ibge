@@ -1,7 +1,7 @@
 # ibge
-Data collection of geographical divisions of Brazil by IBGE (https://servicodados.ibge.gov.br/api/docs).
+Data collection of geographical divisions of Brazil by IBGE (https://servicodados.data.gov.br/api/docs).
 
-Coleta de dados das divisões geográficas do Brasil feita pelo IBGE (https://servicodados.ibge.gov.br/api/docs).
+Coleta de dados das divisões geográficas do Brasil feita pelo IBGE (https://servicodados.data.gov.br/api/docs).
 
 # Install
 
@@ -17,36 +17,36 @@ $ pip install -r requirements.txt
 
 ```python
 from ibge.localidades import *
-ibge = Regioes()
+data = Regioes()
 ```
 
 #### count() - number datatype
 ```python
-ibge.count())
+data.count())
 5
 ```
 
 #### json() - array of objects datatype
 ```python
-ibge.json()
+data.json()
 [{'id': 1, 'sigla': 'N', 'nome': 'Norte'}, {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}, {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}, {'id': 4, 'sigla': 'S', 'nome': 'Sul'}, {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}]
 ```
 
 #### getId() - array datatype
 ```python
-ibge.getId()
+data.getId()
 [1, 2, 3, 4, 5]
 ```
 
 #### getSigla() - array datatype
 ```python
-ibge.getSigla()
+data.getSigla()
 ['N', 'NE', 'SE', 'S', 'CO']
 ```
 
 #### getNome() - array datatype
 ```python
-ibge.getNome()
+data.getNome()
 ['Norte', 'Nordeste', 'Sudeste', 'Sul', 'Centro-Oeste']
 ```
 
@@ -55,36 +55,36 @@ ibge.getNome()
 
 ```python
 from ibge.localidades import *
-ibge = Estados()
+data = Estados()
 ```
 
 #### count() - number datatype
 ```python
-ibge.count()
+data.count()
 27
 ```
 
 #### json() - array of objects datatype
 ```python
-ibge.json()
+data.json()
 [{'id': 11, 'sigla': 'RO', 'nome': 'Rondônia', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 12, 'sigla': 'AC', 'nome': 'Acre', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 13, 'sigla': 'AM', 'nome': 'Amazonas', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 15, 'sigla': 'PA', 'nome': 'Pará', 'regiao':{'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 16, 'sigla': 'AP', 'nome': 'Amapá', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 17, 'sigla': 'TO', 'nome': 'Tocantins', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}, {'id': 21, 'sigla': 'MA', 'nome': 'Maranhão', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 22, 'sigla': 'PI', 'nome': 'Piauí', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 23, 'sigla': 'CE', 'nome': 'Ceará', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 24, 'sigla': 'RN', 'nome': 'Rio Grande do Norte', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 25, 'sigla': 'PB', 'nome': 'Paraíba', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 26, 'sigla': 'PE', 'nome': 'Pernambuco', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 27, 'sigla': 'AL', 'nome': 'Alagoas', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 28, 'sigla': 'SE', 'nome': 'Sergipe', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 29, 'sigla': 'BA', 'nome': 'Bahia', 'regiao': {'id': 2, 'sigla': 'NE', 'nome': 'Nordeste'}}, {'id': 31, 'sigla': 'MG', 'nome': 'Minas Gerais', 'regiao': {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}}, {'id': 32, 'sigla': 'ES', 'nome': 'Espírito Santo', 'regiao': {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}}, {'id': 33, 'sigla': 'RJ', 'nome': 'Rio de Janeiro', 'regiao': {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}}, {'id': 35, 'sigla': 'SP', 'nome': 'São Paulo', 'regiao': {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}}, {'id': 41, 'sigla': 'PR', 'nome': 'Paraná', 'regiao': {'id': 4, 'sigla': 'S', 'nome': 'Sul'}}, {'id': 42, 'sigla': 'SC', 'nome': 'Santa Catarina', 'regiao': {'id': 4, 'sigla': 'S', 'nome': 'Sul'}}, {'id': 43, 'sigla': 'RS', 'nome': 'Rio Grande do Sul', 'regiao': {'id': 4, 'sigla': 'S', 'nome': 'Sul'}}, {'id': 50, 'sigla': 'MS', 'nome': 'Mato Grosso do Sul', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}, {'id': 51, 'sigla': 'MT', 'nome': 'Mato Grosso', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}, {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}, {'id': 53, 'sigla': 'DF', 'nome': 'Distrito Federal', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}]
 ```
 
 #### getId() - array datatype
 ```python
-ibge.getId()
+data.getId()
 [11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 35, 41, 42, 43, 50, 51, 52, 53]
 ```
 
 #### getSigla() - array datatype
 ```python
-ibge.getSigla()
+data.getSigla()
 ['RO', 'AC', 'AM', 'RR', 'PA', 'AP', 'TO', 'MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'SE', 'BA', 'MG', 'ES', 'RJ', 'SP', 'PR', 'SC', 'RS', 'MS', 'MT', 'GO', 'DF']
 ```
 
 #### getNome() - array datatype
 ```python
-ibge.getNome()
+data.getNome()
 ['Rondônia', 'Acre', 'Amazonas', 'Roraima', 'Pará', 'Amapá', 'Tocantins', 'Maranhão', 'Piauí', 'Ceará', 'Rio Grande do Norte', 'Paraíba', 'Pernambuco', 'Alagoas', 'Sergipe', 'Bahia', 'Minas Gerais', 'Espírito Santo', 'Rio de Janeiro', 'São Paulo', 'Paraná', 'Santa Catarina', 'Rio Grande do Sul', 'Mato Grosso do Sul', 'Mato Grosso', 'Goiás', 'Distrito Federal']
 ```
 
@@ -93,18 +93,18 @@ ibge.getNome()
 
 ```python
 from ibge.localidades import *
-ibge = Municipios()
+data = Municipios()
 ```
 
 #### count() - number datatype
 ```python
-ibge.count()
+data.count()
 5570
 ```
 
 #### json() - array of objects datatype
 ```python
-ibge.json()
+data.json()
 
 (...)
 [{'id': 5221858, 'nome': 'Valparaíso de Goiás', 'microrregiao': {'id': 52012, 'nome': 'Entorno de Brasília', 'mesorregiao': {'id': 5204, 'nome': 'Leste Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5221908, 'nome': 'Varjão', 'microrregiao': {'id': 52014, 'nome': 'Vale do Rio dos Bois', 'mesorregiao': {'id': 5205, 'nome': 'Sul Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5222005, 'nome': 'Vianópolis', 'microrregiao': {'id': 52016, 'nome': 'Pires do Rio', 'mesorregiao': {'id': 5205, 'nome': 'Sul Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5222054, 'nome': 'Vicentinópolis', 'microrregiao': {'id': 52015, 'nome': 'Meia Ponte', 'mesorregiao': {'id': 5205, 'nome': 'Sul Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5222203, 'nome': 'Vila Boa', 'microrregiao': {'id': 52012, 'nome': 'Entorno de Brasília', 'mesorregiao': {'id': 5204, 'nome': 'Leste Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5222302, 'nome': 'Vila Propício', 'microrregiao': {'id': 52012, 'nome': 'Entorno de Brasília', 'mesorregiao': {'id': 5204, 'nome': 'Leste Goiano', 'UF': {'id': 52, 'sigla': 'GO', 'nome': 'Goiás', 'regiao': {'id': 5, 'sigla': 'CO', 'nome': 'Centro-Oeste'}}}}}, {'id': 5300108, 'nome': 'Brasília', 'microrregiao': {'id': 53001, 'nome':'Brasília', 'mesorregiao': {'id': 5301, 'nome': 'Distrito Federal', 'UF': {'id': 53, 'sigla': 'DF', 'nome': 'Distrito Federal', 'regiao': {'id': 5,
@@ -113,7 +113,7 @@ ibge.json()
 
 #### getId() - array datatype
 ```python
-ibge.getId()
+data.getId()
 
 (...)
 [5210000, 5210109, 5210158, 5210208, 5210307, 5210406, 5210562, 5210604, 5210802, 5210901, 5211008,
@@ -122,7 +122,7 @@ ibge.getId()
 
 #### getNome() - array datatype
 ```python
-ibge.getNome()
+data.getNome()
 
 (...)
 ['Nova Crixás', 'Nova Glória', 'Nova Iguaçu de Goiás', 'Nova Roma', 'Nova Veneza', 'Novo Brasil', 'Novo Gama', 'Novo Planalto', 'Orizona', 'Ouro Verde de Goiás', 'Ouvidor', 'Padre Bernardo', 'Palestina de Goiás', 'Palmeiras de Goiás', 'Palmelo', 'Palminópolis', 'Panamá', 'Paranaiguara', 'Paraúna', 'Perolândia', 'Petrolina de Goiás', 'Pilar de Goiás', 'Piracanjuba', 'Piranhas', 'Pirenópolis', 'Pires do Rio', 'Planaltina', 'Pontalina', 'Porangatu', 'Porteirão', 'Portelândia', 'Posse', 'Professor Jamil', 'Quirinópolis', 'Rialma', 'Rianápolis', 'Rio Quente', 'Rio Verde', 'Rubiataba', 'Sanclerlândia', 'Santa Bárbara de Goiás', 'Santa Cruz de Goiás', 'Santa Fé de Goiás', 'Santa Helena de Goiás', 'Santa Isabel', 'Santa Rita do Araguaia', 'Santa Rita do Novo Destino', 'Santa Rosa de Goiás', 'Santa Tereza de Goiás', 'Santa Terezinha de Goiás', 'Santo Antônio da Barra', 'Santo Antônio de Goiás', 'Santo Antônio do Descoberto', 'São Domingos', 'São Francisco de Goiás', "São João d'Aliança", 'São João da Paraúna', 'São Luís de Montes Belos', 'São Luiz do Norte', 'São Miguel do Araguaia', 'São Miguel do Passa Quatro', 'São Patrício', 'São Simão', 'Senador Canedo', 'Serranópolis', 'Silvânia', 'Simolândia', "Sítio d'Abadia", 'Taquaral de Goiás', 'Teresina de Goiás', 'Terezópolis de Goiás', 'Três Ranchos', 'Trindade', 'Trombas', 'Turvânia', 'Turvelândia', 'Uirapuru', 'Uruaçu', 'Uruana', 'Urutaí', 'Valparaíso de Goiás', 'Varjão', 'Vianópolis', 'Vicentinópolis', 'Vila Boa', 'Vila Propício', 'Brasília']
@@ -131,14 +131,14 @@ ibge.getNome()
 
 #### getDescricaoUF() - string datatype
 ```python
-ibge.getDescricaoUF()
+data.getDescricaoUF()
 
 (...)
 ```
 
 #### getDados() - object datatype
 ```python
-ibge.getDados()
+data.getDados()
 
 (...)
 [{'ibge': 5220108, 'nome': 'São Luís de Montes Belos', 'uf': 'GO'}, {'ibge': 5220157, 'nome': 'São Luiz do Norte', 'uf': 'GO'}, {'ibge': 5220207, 'nome': 'São Miguel do Araguaia', 'uf': 'GO'}, {'ibge': 5220264, 'nome': 'São Miguel do Passa Quatro', 'uf': 'GO'}, {'ibge': 5220280, 'nome': 'São Patrício', 'uf': 'GO'}, {'ibge': 5220405, 'nome': 'São Simão', 'uf': 'GO'}, {'ibge': 5220454, 'nome': 'Senador Canedo', 'uf': 'GO'}, {'ibge': 5220504, 'nome': 'Serranópolis', 'uf': 'GO'}, {'ibge': 5220603, 'nome': 'Silvânia', 'uf': 'GO'}, {'ibge': 5220686, 'nome': 'Simolândia', 'uf': 'GO'},{'ibge': 5220702, 'nome': "Sítio d'Abadia", 'uf': 'GO'}, {'ibge': 5221007, 'nome': 'Taquaral de Goiás', 'uf': 'GO'}, {'ibge': 5221080, 'nome': 'Teresina de Goiás', 'uf': 'GO'}, {'ibge': 5221197, 'nome': 'Terezópolis de Goiás', 'uf': 'GO'}, {'ibge': 5221304, 'nome': 'Três Ranchos', 'uf': 'GO'}, {'ibge': 5221403, 'nome': 'Trindade', 'uf': 'GO'}, {'ibge': 5221452, 'nome': 'Trombas', 'uf': 'GO'}, {'ibge': 5221502, 'nome': 'Turvânia', 'uf': 'GO'}, {'ibge': 5221551, 'nome': 'Turvelândia', 'uf': 'GO'}, {'ibge': 5221577, 'nome': 'Uirapuru', 'uf': 'GO'}, {'ibge': 5221601, 'nome': 'Uruaçu', 'uf': 'GO'}, {'ibge': 5221700, 'nome': 'Uruana', 'uf': 'GO'}, {'ibge': 5221809, 'nome': 'Urutaí', 'uf': 'GO'}, {'ibge': 5221858, 'nome': 'Valparaíso deGoiás', 'uf': 'GO'}, {'ibge': 5221908, 'nome': 'Varjão', 'uf': 'GO'}, {'ibge': 5222005, 'nome': 'Vianópolis', 'uf': 'GO'}, {'ibge': 5222054, 'nome': 'Vicentinópolis', 'uf': 'GO'}, {'ibge': 5222203, 'nome': 'Vila Boa', 'uf': 'GO'}, {'ibge': 5222302, 'nome': 'Vila Propício', 'uf': 'GO'}, {'ibge':5300108, 'nome': 'Brasília', 'uf': 'DF'}]
@@ -149,42 +149,42 @@ ibge.getDados()
 
 ```python
 from ibge.localidades import *
-ibge = Municipio('3302106')
+data = Municipio('3302106')
 ```
 
 #### count() - number datatype
 ```python
-ibge.count()
+data.count()
 1
 ```
 
 #### json() - array of objects datatype
 ```python
-ibge.json()
+data.json()
 {'id': 3302106, 'nome': 'Itaocara', 'microrregiao': {'id': 33002, 'nome': 'Santo Antônio de Pádua', 'mesorregiao': {'id': 3301, 'nome': 'Noroeste Fluminense', 'UF': {'id': 33, 'sigla': 'RJ', 'nome': 'Rio de Janeiro', 'regiao': {'id': 3, 'sigla': 'SE', 'nome': 'Sudeste'}}}}}
 ```
 
 #### getNome() - array datatype
 ```python
-ibge.getNome()
+data.getNome()
 Itaocara
 ```
 
 #### getId() - array datatype
 ```python
-ibge.getId())
+data.getId())
 3302106
 ```
 
 #### getUF() - string datatype
 ```python
-ibge.getUF()
+data.getUF()
 RJ
 ```
 
 #### getDescricaoUF() - string datatype
 ```python
-ibge.getDescricaoUF()
+data.getDescricaoUF()
 Rio de Janeiro
 ```
 
@@ -193,34 +193,34 @@ Rio de Janeiro
 
 ```python
 from ibge.localidades import *
-ibge = MunicipioPorUF('14')
+data = MunicipioPorUF('14')
 ```
 
 #### count() - number datatype
 ```python
-ibge.count()
+data.count()
 15
 ```
 
 #### json() - array of objects datatype
 ```python
-ibge.json()
+data.json()
 
 [{'id': 1400027, 'nome': 'Amajari', 'microrregiao': {'id': 14001, 'nome': 'Boa Vista', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400050, 'nome': 'Alto Alegre', 'microrregiao': {'id': 14001, 'nome': 'Boa Vista', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400100, 'nome': 'Boa Vista', 'microrregiao': {'id': 14001, 'nome': 'Boa Vista', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome':'Norte'}}}}}, {'id': 1400159, 'nome': 'Bonfim', 'microrregiao': {'id': 14002, 'nome': 'Nordeste de Roraima', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400175, 'nome':'Cantá', 'microrregiao': {'id': 14002, 'nome': 'Nordeste de Roraima', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400209, 'nome': 'Caracaraí', 'microrregiao': {'id': 14003, 'nome': 'Caracaraí', 'mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400233, 'nome': 'Caroebe', 'microrregiao': {'id': 14004, 'nome': 'Sudeste de Roraima', 'mesorregiao':{'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400282, 'nome': 'Iracema', 'microrregiao': {'id': 14003, 'nome': 'Caracaraí', 'mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400308, 'nome': 'Mucajaí', 'microrregiao':{'id': 14003, 'nome': 'Caracaraí', 'mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400407, 'nome': 'Normandia', 'microrregiao': {'id': 14002, 'nome': 'Nordeste de Roraima', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400456, 'nome': 'Pacaraima', 'microrregiao': {'id': 14001, 'nome': 'Boa Vista', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400472, 'nome': 'Rorainópolis', 'microrregiao': {'id': 14004, 'nome': 'Sudeste de Roraima', 'mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla':'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400506, 'nome': 'São João da Baliza', 'microrregiao': {'id': 14004, 'nome': 'Sudeste de Roraima', 'mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400605, 'nome': 'São Luiz', 'microrregiao': {'id': 14004, 'nome': 'Sudeste de Roraima','mesorregiao': {'id': 1402, 'nome': 'Sul de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}, {'id': 1400704, 'nome': 'Uiramutã', 'microrregiao': {'id': 14002, 'nome': 'Nordeste de Roraima', 'mesorregiao': {'id': 1401, 'nome': 'Norte de Roraima', 'UF': {'id': 14, 'sigla': 'RR', 'nome': 'Roraima', 'regiao': {'id': 1, 'sigla': 'N', 'nome': 'Norte'}}}}}]
 ```
 
 ```python
-ibge.getId()
+data.getId()
 [1400027, 1400050, 1400100, 1400159, 1400175, 1400209, 1400233, 1400282, 1400308, 1400407, 1400456, 1400472, 1400506, 1400605, 1400704]
 ```
 
 #### getNome() - array datatype
 ```python
-ibge.getNome()
+data.getNome()
 ['Amajari', 'Alto Alegre', 'Boa Vista', 'Bonfim', 'Cantá', 'Caracaraí', 'Caroebe', 'Iracema', 'Mucajaí', 'Normandia', 'Pacaraima', 'Rorainópolis', 'São João da Baliza', 'São Luiz', 'Uiramutã']
 ```
 
 # Licença
-IBGE - https://servicodados.ibge.gov.br/api/docs
+IBGE - https://servicodados.data.gov.br/api/docs
 
 
