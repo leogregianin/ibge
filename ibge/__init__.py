@@ -1,1 +1,1 @@
-__all__ = ["localidades.py"]
+__all__ = ["localidades"]
