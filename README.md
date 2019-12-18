@@ -1,7 +1,7 @@
 # ibge
-Data collection of geographical divisions of Brazil by IBGE (https://servicodados.data.gov.br/api/docs).
+Data collection of geographical divisions of Brazil by IBGE (https://servicodados.ibge.gov.br/api/docs).
 
-Coleta de dados das divisões geográficas do Brasil feita pelo IBGE (https://servicodados.data.gov.br/api/docs).
+Coleta de dados das divisões geográficas do Brasil feita pelo IBGE (https://servicodados.ibge.gov.br/api/docs).
 
 # Install
 
@@ -221,6 +221,6 @@ data.getNome()
 ```
 
 # Licença
-IBGE - https://servicodados.data.gov.br/api/docs
+IBGE - https://servicodados.ibge.gov.br/api/docs
 
 
