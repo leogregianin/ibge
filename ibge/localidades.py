@@ -19,7 +19,7 @@ headers = {
 
 class Regioes(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/regioes'
         request = requests.get(url, headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
@@ -45,7 +45,7 @@ class Regioes(object):
 
 class Estados(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
         request = requests.get(url, headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
@@ -71,7 +71,7 @@ class Estados(object):
 
 class Municipios(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios'
         request = requests.get(url, headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
@@ -112,7 +112,7 @@ class Municipios(object):
 
 class Municipio(object):
 
-    def __init__(self, codigo_ibge=None, json_ibge=None):
+    def __init__(self, codigo_ibge=None):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios/{}'
         request = requests.get(url.format(codigo_ibge), headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
@@ -141,7 +141,7 @@ class Municipio(object):
 
 class MunicipioPorUF(object):
 
-    def __init__(self, codigo_uf=None, json_ibge=None):
+    def __init__(self, codigo_uf=None):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/{}/municipios'
         request = requests.get(url.format(codigo_uf), headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
