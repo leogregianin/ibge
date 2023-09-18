@@ -26,7 +26,7 @@ data = Regioes()
 
 #### count() - number datatype
 ```python
-data.count())
+data.count()
 5
 ```
 
@@ -176,7 +176,7 @@ Itaocara
 
 #### getId() - array datatype
 ```python
-data.getId())
+data.getId()
 3302106
 ```
 
@@ -226,5 +226,3 @@ data.getNome()
 
 # Licença
 IBGE - https://servicodados.ibge.gov.br/api/docs
-
-

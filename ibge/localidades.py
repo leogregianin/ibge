@@ -37,15 +37,16 @@ class HttpUnsafeLegacyRenegotiationAdapter(requests.adapters.HTTPAdapter):
             num_pools=connections, maxsize=maxsize,
             block=block, ssl_context=self.ssl_context)
 
+
 class Regioes(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/regioes'
         with requests.sessions.Session() as session:
             session.mount('https://', HttpUnsafeLegacyRenegotiationAdapter())
             request = session.get(url, headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
-    
+
     def json(self):
         return self.json_ibge
 
@@ -54,10 +55,10 @@ class Regioes(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
-        
+
     def getSigla(self):
         return [self.json_ibge[i]['sigla'] for i in range(self.count())]
 
@@ -67,7 +68,7 @@ class Regioes(object):
 
 class Estados(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
         with requests.sessions.Session() as session:
             session.mount('https://', HttpUnsafeLegacyRenegotiationAdapter())
@@ -82,7 +83,7 @@ class Estados(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
@@ -95,7 +96,7 @@ class Estados(object):
 
 class Municipios(object):
 
-    def __init__(self, json_ibge=None):
+    def __init__(self):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios'
         with requests.sessions.Session() as session:
             session.mount('https://', HttpUnsafeLegacyRenegotiationAdapter())
@@ -110,7 +111,7 @@ class Municipios(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
@@ -118,10 +119,12 @@ class Municipios(object):
         return [self.json_ibge[i]['nome'] for i in range(self.count())]
 
     def getDescricaoUF(self):
-        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['nome'] for i in range(self.count())]
+        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['nome']
+                for i in range(self.count())]
 
     def getSiglaUF(self):
-        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla'] for i in range(self.count())]
+        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla']
+                for i in range(self.count())]
 
     def getDados(self):
         dados = []
@@ -136,7 +139,7 @@ class Municipios(object):
 
 class Municipio(object):
 
-    def __init__(self, codigo_ibge=None, json_ibge=None):
+    def __init__(self, codigo_ibge=None):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios/{}'
         with requests.sessions.Session() as session:
             session.mount('https://', HttpUnsafeLegacyRenegotiationAdapter())
@@ -151,7 +154,7 @@ class Municipio(object):
 
     def count(self):
         return int(len(self.json_ibge)/3)
-        
+
     def getId(self):
         return self.json_ibge['id']
 
@@ -167,7 +170,7 @@ class Municipio(object):
 
 class MunicipioPorUF(object):
 
-    def __init__(self, codigo_uf=None, json_ibge=None):
+    def __init__(self, codigo_uf=None):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/{}/municipios'
         with requests.sessions.Session() as session:
             session.mount('https://', HttpUnsafeLegacyRenegotiationAdapter())
@@ -182,7 +185,7 @@ class MunicipioPorUF(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
