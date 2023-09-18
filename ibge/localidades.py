@@ -5,7 +5,7 @@ https://servicodados.ibge.gov.br/api/docs/
 """
 
 import requests
-import json 
+import json
 
 headers = {
     'Content-Type': 'application/json;charset=UTF-8',
@@ -16,13 +16,14 @@ headers = {
     'Connection': 'keep-alive',
 }
 
+
 class Regioes(object):
 
     def __init__(self, json_ibge=None):
         url = 'https://servicodados.ibge.gov.br/api/v1/localidades/regioes'
         request = requests.get(url, headers=headers)
         self.json_ibge = json.loads(request.content.decode('utf-8'))
-    
+
     def json(self):
         return self.json_ibge
 
@@ -31,10 +32,10 @@ class Regioes(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
-        
+
     def getSigla(self):
         return [self.json_ibge[i]['sigla'] for i in range(self.count())]
 
@@ -57,7 +58,7 @@ class Estados(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
@@ -83,7 +84,7 @@ class Municipios(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
@@ -91,10 +92,12 @@ class Municipios(object):
         return [self.json_ibge[i]['nome'] for i in range(self.count())]
 
     def getDescricaoUF(self):
-        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['nome'] for i in range(self.count())]
+        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['nome']
+                for i in range(self.count())]
 
     def getSiglaUF(self):
-        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla'] for i in range(self.count())]
+        return [self.json_ibge[i]['microrregiao']['mesorregiao']['UF']['sigla']
+                for i in range(self.count())]
 
     def getDados(self):
         dados = []
@@ -122,7 +125,7 @@ class Municipio(object):
 
     def count(self):
         return int(len(self.json_ibge)/3)
-        
+
     def getId(self):
         return self.json_ibge['id']
 
@@ -151,7 +154,7 @@ class MunicipioPorUF(object):
 
     def count(self):
         return len(self.json_ibge)
-        
+
     def getId(self):
         return [self.json_ibge[i]['id'] for i in range(self.count())]
 
